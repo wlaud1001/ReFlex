@@ -40,7 +40,7 @@ python img_edit.py \
     - If provided, mask generation and latent blending will be applied.
     - If omitted, editing proceeds without latent blending.
 - --target_prompt: Text prompt describing the desired edited image.
-- --blend_word (optional): Word in --source_prompt to guide mask generation via its cross-attention map.
+- --blend_word (optional): Word in --source_prompt to guide mask generation via its I2T-CA map.
     -  If omitted, the blend word is automatically inferred by comparing source_prompt and target_prompt.
 - --results_dir: Directory to save the output images
 ### 
