@@ -61,59 +61,69 @@ parser.add_argument(
 parser.add_argument(
     "--ca_steps",
     type=int,
-    default=10
+    default=10,
+    help="Number of steps to apply I2T-CA adaptation and injection.",
 )
 
 parser.add_argument(
     "--sa_steps",
     type=int,
     default=7
+    help="Number of steps to apply I2I-SA adaptation and injection.",
 )
 
 parser.add_argument(
     "--feature_steps",
     type=int,
     default=5
+    help="Number of steps to inject residual features.",
 )
 
 
 parser.add_argument(
     "--ca_attn_layer_from",
     type=int,
-    default=13
+    default=13,
+    help="Layers to apply I2T-CA adaptation and injection.",
 )
 parser.add_argument(
     "--ca_attn_layer_to",
     type=int,
-    default=45
+    default=45,
+    help="Layers to apply I2T-CA adaptation and injection.",
 )
 
 parser.add_argument(
     "--sa_attn_layer_from",
     type=int,
-    default=20
+    default=20,
+    help="Layers to apply I2I-SA adaptation and injection.",
 )
 parser.add_argument(
     "--sa_attn_layer_to",
     type=int,
-    default=45
+    default=45,
+    help="Layers to apply I2I-SA adaptation and injection.",
 )
 
 parser.add_argument(
     "--feature_layer_from",
     type=int,
-    default=13
+    default=13,
+    help="Layers to inject residual features.",
 )
 parser.add_argument(
     "--feature_layer_to",
     type=int,
-    default=20
+    default=20,
+    help="Layers to inject residual features.",
 )
 
 parser.add_argument(
     "--flow_steps",
     type=int,
-    default=7
+    default=7,
+    help="Steps to apply forward step before inversion",
 )
 parser.add_argument(
     "--step_start",
@@ -136,19 +146,22 @@ parser.add_argument(
 parser.add_argument(
     "--attn_topk",
     type=int,
-    default=20
+    default=20,
+    help="Hyperparameter for I2I-SA adaptaion."
 )
 
 parser.add_argument(
     "--text_scale",
     type=float,
-    default=4
+    default=4,
+    help="Hyperparameter for I2T-CA adaptaion."
 )
 
 parser.add_argument(
     "--mid_step_index",
     type=int,
-    default=14
+    default=14,
+    help="Hyperparameter for mid-step feature extraction."
 )
 
 
@@ -167,7 +180,8 @@ parser.add_argument(
 parser.add_argument(
     "--mask_steps",
     type=int,
-    default=18
+    default=18,
+    help="Steps to apply latent blending"
 )
 
 parser.add_argument(
