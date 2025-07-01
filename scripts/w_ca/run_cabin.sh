@@ -1,0 +1,20 @@
+source_prompt='a painting of a cabin in the snow with mountains in the background'
+target_prompt='a painting of a car in the snow with mountains in the background'
+
+ca_steps=10
+sa_steps=7
+feature_steps=5
+
+attn_topk=40
+
+python img_edit.py \
+    --gpu 3 \
+    --seed 0 \
+    --img_path 'data/images/cabin.jpg' \
+    --source_prompt "$source_prompt" \
+    --target_prompt  "$target_prompt" \
+    --results_dir 'results/cabin' \
+    --ca_steps $ca_steps \
+    --sa_steps $sa_steps \
+    --feature_steps $feature_steps \
+    --attn_topk $attn_topk 

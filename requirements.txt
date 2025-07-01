@@ -1,0 +1,12 @@
+diffusers==0.31.0
+torch==2.4.1
+pandas
+matplotlib
+transformers==4.44.2
+torchao
+torchvision
+opencv-python
+scikit-image
+accelerate
+sentencepiece
+protobuf
