@@ -68,14 +68,14 @@ parser.add_argument(
 parser.add_argument(
     "--sa_steps",
     type=int,
-    default=7
+    default=7,
     help="Number of steps to apply I2I-SA adaptation and injection.",
 )
 
 parser.add_argument(
     "--feature_steps",
     type=int,
-    default=5
+    default=5,
     help="Number of steps to inject residual features.",
 )
 
@@ -240,7 +240,10 @@ def main(args):
     fix_seed(args.seed)
     device = torch.device('cuda')
 
-    pipe = get_flux_pipeline(pipeline_class=NewFluxPipeline)
+    pipe = get_flux_pipeline(
+        model_id='black-forest-labs/FLUX.1-dev',
+        pipeline_class=NewFluxPipeline
+    )
     attn_proc = NewFluxAttnProcessor2_0
     pipe = pipe.to(device)
 
